@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>平台快速跳转</title>
+  <!-- 引入Tailwind CSS（国内CDN，访问更快） -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/tailwindcss/3.4.1/tailwind.min.js"></script>
+  <!-- 引入Iconify图标库 -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <style>
+    /* 卡片交互样式 */
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    .card-active:active {
+      transform: scale(0.98);
+    }
+    /* 品牌色定义 */
+    .bg-doubao {
+      background-color: #4CAF50;
+    }
+    .bg-douyin {
+      background-color: #FE2C55;
+    }
+    .bg-byte {
+      background-color: #0066FF;
+    }
+  </style>
+</head>
+<body class="bg-[#F0F7EE] min-h-screen flex items-center justify-center p-8">
+  <div class="max-w-5xl w-full">
+    <!-- 标题标签 -->
+    <div class="bg-[#4CAF50] text-white px-4 py-2 rounded inline-block mb-8 font-medium">
+      平台快速跳转
+    </div>
+
+    <!-- 卡片网格：移动端单列，桌面端三列 -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- 豆包卡片 -->
+      <a href="https://www.doubao.com" target="_blank" rel="noopener noreferrer" 
+         class="card-hover card-active bg-white rounded-xl border border-[#E0E0E0] shadow-md p-6 block">
+        <div class="flex flex-col items-center text-center">
+          <!-- 图标容器 -->
+          <div class="w-16 h-16 bg-doubao/10 rounded-full flex items-center justify-center mb-4">
+            <iconify-icon icon="simple-icons:douban" width="32" height="32" class="text-[#4CAF50]"></iconify-icon>
+          </div>
+          <!-- 标题 -->
+          <h3 class="text-xl font-medium text-[#333333] mb-2">豆包</h3>
+          <!-- 描述 -->
+          <p class="text-[#666666] text-sm">智能助手 · 高效创作</p>
+          <!-- 跳转提示 -->
+          <div class="mt-4 text-[#4CAF50] text-xs font-medium flex items-center">
+            <iconify-icon icon="mdi:arrow-right" width="14" height="14" class="mr-1"></iconify-icon>
+            立即前往
+          </div>
+        </div>
+      </a>
+
+      <!-- 抖音卡片 -->
+      <a href="https://www.douyin.com" target="_blank" rel="noopener noreferrer" 
+         class="card-hover card-active bg-white rounded-xl border border-[#E0E0E0] shadow-md p-6 block">
+        <div class="flex flex-col items-center text-center">
+          <!-- 图标容器 -->
+          <div class="w-16 h-16 bg-douyin/10 rounded-full flex items-center justify-center mb-4">
+            <iconify-icon icon="simple-icons:tiktok" width="32" height="32" class="text-[#FE2C55]"></iconify-icon>
+          </div>
+          <!-- 标题 -->
+          <h3 class="text-xl font-medium text-[#333333] mb-2">抖音</h3>
+          <!-- 描述 -->
+          <p class="text-[#666666] text-sm">记录美好生活</p>
+          <!-- 跳转提示 -->
+          <div class="mt-4 text-[#FE2C55] text-xs font-medium flex items-center">
+            <iconify-icon icon="mdi:arrow-right" width="14" height="14" class="mr-1"></iconify-icon>
+            立即前往
+          </div>
+        </div>
+      </a>
+
+      <!-- 字节跳动卡片 -->
+      <a href="https://www.bytedance.com" target="_blank" rel="noopener noreferrer" 
+         class="card-hover card-active bg-white rounded-xl border border-[#E0E0E0] shadow-md p-6 block">
+        <div class="flex flex-col items-center text-center">
+          <!-- 图标容器 -->
+          <div class="w-16 h-16 bg-byte/10 rounded-full flex items-center justify-center mb-4">
+            <iconify-icon icon="simple-icons:bytedance" width="32" height="32" class="text-[#0066FF]"></iconify-icon>
+          </div>
+          <!-- 标题 -->
+          <h3 class="text-xl font-medium text-[#333333] mb-2">字节跳动</h3>
+          <!-- 描述 -->
+          <p class="text-[#666666] text-sm">激发创造 · 丰富生活</p>
+          <!-- 跳转提示 -->
+          <div class="mt-4 text-[#0066FF] text-xs font-medium flex items-center">
+            <iconify-icon icon="mdi:arrow-right" width="14" height="14" class="mr-1"></iconify-icon>
+            立即前往
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
